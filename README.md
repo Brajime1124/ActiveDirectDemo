@@ -14,7 +14,7 @@ Before starting, ensure you have:
 
 ## **Step 1: Set Up the Virtualization Environment**  
 
-We will create virtual machines (VMs) for both **Windows Server** and **Windows Client**.  
+"In this guide, I'll walk you through the steps I took to build my own Active Directory Home Lab from scratch. We'll go step by step, setting up Windows Server and Windows Client virtual machines (VMs), configuring networking, and managing users with Active Directory."
 
 ### **1. Install Virtualization Software**  
 1. Download and install **VMware Workstation**, **VirtualBox**, or enable **Hyper-V** on Windows.  
