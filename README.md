@@ -9,17 +9,34 @@
 </ul>
 
 <h2>Step 1: Set Up the Virtualization Environment</h2>
-<ol>
-    <li>Install your preferred virtualization software.</li>
-    <li>Create a new <strong>Virtual Machine (VM)</strong> for Windows Server:
-        <ul>
-            <li>Allocate at least <strong>4GB RAM, 2 CPU cores</strong></li>
-            <li>Set the virtual disk to <strong>50GB</strong> or more</li>
-            <li>Mount the <strong>Windows Server ISO</strong> and begin installation</li>
-        </ul>
-    </li>
-    <li>Create additional VMs for Windows 10/11 clients following similar steps.</li>
-</ol>
+
+Before we can build an Active Directory (AD) home lab, we need a controlled environment where we can install and configure the necessary systems. To achieve this, we’ll set up a **virtualized network** using a hypervisor of your choice, such as **VMware Workstation, VirtualBox, or Hyper-V**.
+
+### 1. Install a Virtualization Platform
+Choose a hypervisor that suits your system’s capabilities and install it. Popular options include:
+
+- **VMware Workstation Pro/Player** – Offers a user-friendly interface and solid performance.
+- **VirtualBox** – A free and open-source alternative with broad compatibility.
+- **Hyper-V** (Windows only) – Built-in for Windows Pro/Enterprise users.
+
+### 2. Create a Virtual Machine (VM) for Windows Server
+Once your hypervisor is installed, create a new VM that will act as your domain controller. Configure it as follows:
+
+- **Memory**: Allocate **at least 4GB RAM** (8GB recommended for better performance).
+- **CPU**: Assign **2 CPU cores** to ensure smooth operation.
+- **Storage**: Set the virtual disk to **50GB or more**, depending on available space.
+- **Network Adapter**: Choose **NAT or Bridged mode**, depending on whether you want the VMs to communicate with your host system.
+- **Installation Media**: Mount the **Windows Server ISO** file to begin the installation process.
+
+### 3. Create Additional VMs for Client Machines
+To simulate a real-world Active Directory environment, we need client machines to join the domain. Follow similar steps to create one or more **Windows 10 or Windows 11 VMs**, ensuring they have:
+
+- **2GB RAM (minimum)**
+- **1 CPU core**
+- **30GB of disk space**
+- **Network settings that allow communication with the domain controller**
+
+By the end of this step, you should have a **Windows Server VM** ready for installation and **one or more client VMs** prepared to join the domain. Next, we’ll configure the server and set up Active Directory.
 
 <h2>Step 2: Install Windows Server and Configure Basic Settings</h2>
 <ol>
