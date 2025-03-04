@@ -139,7 +139,7 @@ Your **Active Directory home lab** is now fully operational! 🎉
 ---
 
 ## **📌 Conclusion**  
-This home lab demonstrates your ability to set up and manage an **Active Directory environment**, a key skill in IT support, system administration, and cybersecurity roles. Recruiters can see your hands-on experience with:  
+This home lab demonstrates my ability to set up and manage an **Active Directory environment**, a key skill in IT support, system administration, and cybersecurity roles. Recruiters can see hands-on experience with:  
 
 ✅ **Virtualization**  
 ✅ **Windows Server Administration**  
