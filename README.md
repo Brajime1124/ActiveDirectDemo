@@ -94,7 +94,60 @@ We will create virtual machines (VMs) for both **Windows Server** and **Windows 
 
 ### **1. Configure Client VM Network Settings**  
 1. Open **Network and Sharing Center** → **Change adapter settings**.  
-2. Right-click **Ethernet** → **Properties** → **Internet Pro
+2. Right-click **Ethernet** → **Properties** → **Internet Protocol Version 4 (TCP/IPv4)**.  
+3. Set:  
+   - **IP Address:** `192.168.1.20`  
+   - **Subnet Mask:** `255.255.255.0`  
+   - **Default Gateway:** `192.168.1.1`  
+   - **Preferred DNS Server:** `192.168.1.10`  
+4. Click **OK** and restart the VM.  
+
+### **2. Join the Client to the Domain**  
+1. Open **System Properties** (`Win + R`, type `sysdm.cpl`, press **Enter**).  
+2. Click **Change settings** → **Change**.  
+3. Select **Domain**, enter `MyLab.local`.  
+4. Provide **Domain Admin credentials**.  
+5. Restart the VM and log in with a domain user.  
+
+---
+
+## **Step 6: Implementing Group Policies (GPOs)**  
+
+### **1. Open Group Policy Management**  
+1. Click **Start**, type `Group Policy Management`, and open the tool.  
+2. Expand **Forest** → **Domains** → `MyLab.local`.  
+
+### **2. Apply Security Policies**  
+1. Right-click **Default Domain Policy** → **Edit**.  
+2. Apply policies such as:  
+   - **Password complexity enforcement**  
+   - **Disable USB storage**  
+   - **Deploy a desktop wallpaper**  
+
+3. Restart the client VM to apply the policies.  
+
+---
+
+## **Step 7: Testing and Managing Active Directory**  
+
+Your **Active Directory home lab** is now fully operational! 🎉  
+
+✔ **Use ADUC to manage users and groups**  
+✔ **Monitor authentication logs via Event Viewer**  
+✔ **Test logging in from different client machines**  
+
+---
+
+## **📌 Conclusion**  
+This home lab demonstrates your ability to set up and manage an **Active Directory environment**, a key skill in IT support, system administration, and cybersecurity roles. Recruiters can see your hands-on experience with:  
+
+✅ **Virtualization**  
+✅ **Windows Server Administration**  
+✅ **Networking and Domain Management**  
+✅ **Group Policy Implementation**  
+
+If you found this guide helpful, feel free to ⭐ **star this repo**! 🚀  
+
 
 
 <!--
